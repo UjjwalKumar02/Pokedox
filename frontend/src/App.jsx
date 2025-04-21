@@ -60,43 +60,43 @@ function App() {
     <div className="flex flex-col items-center justify-center min-h-screen">
       <div className="fixed top-5 right-20 max-w-[30%]">
         <button 
-        className="bg-red-500 text-white font-semibold px-6 py-2 rounded-lg"
+        className="bg-black text-white font-semibold px-7 py-2 rounded-lg"
         onClick={handleDesc}
         >
           {!showDesc? "Description" : "Close"}
         </button>
       </div>
       {showDesc && (
-          <div className="fixed top-15 right-20 w-[30%] bg-gray-200 px-4 py-2 rounded-lg">
+          <div className="fixed top-15 right-20 w-[30%] bg-gray-100 px-4 py-2 rounded-lg">
             <p>
             This project is an image classification model which predicts the pokemon names on analyzing the uploaded image. This model is currently limited to 10 pokemons [Bulbasaur, Caterpie, Charmander, Ekans, Pidgey, Pikachu, Rattata, Spearow, Squirtle, Weedle].
           </p>
           </div>
         )}
 
-      <h1 className="text-3xl font-bold mb-2">
+      <h1 className="text-4xl font-semibold mb-4">
         Pokemon Predictor
       </h1>
 
-      <p className="mb-4 font-semibold text-red-400">[Upload Image to Find out]</p>
+      <p className="mb-5 text-lg font-semibold text-gray-500">Upload Image to Find out</p>
       <input
         type="file"
         onChange={handleFileChange}
-        className="mb-4 bg-gray-200 rounded-lg p-2"
+        className="mb-5 bg-gray-100 rounded-lg p-2"
       />
 
       {file && (
         <img
           src={URL.createObjectURL(file)}
           alt="Uploaded preview"
-          className="w-48 h-48 object-contain mt-2 mb-4 rounded-md shadow-md"
+          className="w-48 h-48 object-contain mb-5 rounded-md shadow-md"
         />
       )}
 
 
       <button
         onClick={handleUpload}
-        className="px-4 py-2 bg-red-500 text-white font-semibold rounded-lg cursor-pointer"
+        className="px-7 py-2 bg-black text-white font-semibold rounded-lg cursor-pointer shadow-lg shadow-sky-300"
         disabled={loading}
       >
         {loading ? "Predicting..." : "Predict"}
