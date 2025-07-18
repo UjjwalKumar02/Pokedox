@@ -78,7 +78,7 @@ function App() {
         Pokemon Predictor
       </h1>
 
-      <p className="mb-5 text-lg font-semibold text-gray-500">Upload Image to Find out</p>
+      <p className="mb-5 text-lg text-gray-800">Upload Image to Find out</p>
       <input
         type="file"
         onChange={handleFileChange}
